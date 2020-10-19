@@ -1,4 +1,5 @@
 // Didar Zhexembaev gulpfile.js
+const { src } = require('gulp');
 let
 	gulp         = require('gulp'),
 	pug          = require('gulp-pug'),
@@ -67,6 +68,15 @@ gulp.task('clean:dist', async function(){
 	gulp.src(distPath, {read: false})
 	.pipe(clean())
 	.on('finish', gulp.series('env:dist'));
+});
+
+gulp.task('clean:env', gulp.parallel('clean:src', 'clean:dist'));
+
+gulp.task('remove:env', async function(){
+	gulp.src(distPath, {read: false})
+	.pipe(clean());
+	gulp.src(srcPath, {read: false})
+	.pipe(clean());
 });
 
 gulp.task('html', async function(){
