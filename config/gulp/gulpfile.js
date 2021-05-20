@@ -52,9 +52,7 @@ gulp.task('env:dist', async function(){
 	.pipe(gulp.dest(distPath + 'js/'))
 	.pipe(gulp.dest(distPath + 'css/'))
 	.pipe(gulp.dest(distPath + 'img/'))
-	.pipe(gulp.dest(distPath + 'sass/'))
-	.pipe(gulp.dest(distPath + 'fonts/'))
-	.pipe(gulp.dest(distPath + 'views/'));
+	.pipe(gulp.dest(distPath + 'fonts/'));
 });
 
 gulp.task('clean:src', async function(){
