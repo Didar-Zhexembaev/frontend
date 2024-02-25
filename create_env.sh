@@ -54,3 +54,5 @@ parse_args "$@"
 
 # remove self
 rm $0
+
+# test comment
