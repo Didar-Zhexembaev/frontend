@@ -17,13 +17,6 @@ js_path="src/js"
 
 parse_args() {
 	while [ -n "$1" ]; do
-		case $1 in
-			bootstrap)
-				[ ! -e "$css_path/$(basename $bootstrap_css)" ] &&
-					wget "$bootstrap_css" -P "$css_path"
-				[ ! -e "$js_path/$(basename $bootstrap_js)" ] &&
-					wget "$bootstrap_js" -P "$js_path"
-			;;
 			jquery)
 				[ ! -e "$js_path/$(basename $jquery)" ] &&
 					wget "$jquery" -P "$js_path"
