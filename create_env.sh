@@ -1,6 +1,6 @@
 #!/bin/bash
 
-folder=frontend
+folder=frontend_new
 clone_url=https://github.com/Didar-Zhexembaev/frontend.git
 path="$folder/config/gulp/"
 css_path="src/css"
